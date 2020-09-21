@@ -1,3 +1,5 @@
+![Build and test](https://github.com/kkokosa/String.Abbreviations/workflows/Build%20and%20test/badge.svg)
+
 # String.Abbreviations
 
 A set of predefined `string` static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as:
