@@ -9,8 +9,8 @@ namespace String.Abbreviations
          **/
         private const string Brb = "Be right back";
         private const string Brb_TitleCase = "Be Right Back";
-        private const string Imho = "In my humble oppinion";
-        private const string Imho_TitleCase = "In My Humble Oppinion";
+        private const string Imho = "In my humble opinion";
+        private const string Imho_TitleCase = "In My Humble Opinion";
         private const string Lmao = "Laughing my ass off";
         private const string Lmao_TitleCase = "Laughing My Ass Off";
         private const string Rotfl = "Rolling on the floor laughing";
