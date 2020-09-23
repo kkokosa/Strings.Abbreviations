@@ -22,14 +22,21 @@ namespace String.Abbreviations.Tests
         public void ImhoNormalTest()
         {
             var str = Strings.IMHO();
-            Assert.Equal("In my humble oppinion", str);
+            Assert.Equal("In my humble opinion", str);
+        }
+
+        [Fact]
+        public void EosTest()
+        {
+            var str = Strings.EOS();
+            Assert.Equal("En osaa sanoa", str);
         }
 
         [Fact]
         public void ImhoTitleCaseTest()
         {
             var str = Strings.IMHO(titleCase: true);
-            Assert.Equal("In My Humble Oppinion", str);
+            Assert.Equal("In My Humble Opinion", str);
         }
 
         [Fact]
@@ -86,6 +93,13 @@ namespace String.Abbreviations.Tests
         {
             var str = Strings.YOLO(titleCase: true);
             Assert.Equal("You Only Live Once", str);
+        }
+
+        [Fact]
+        public void ScientificTest()
+        {
+            var ratio = Strings.GetCompressionRatio(nameof(Strings.BRB), Strings.BRB());
+            Assert.Equal(0.2307692307692307692307692308M, ratio);
         }
     }
 }

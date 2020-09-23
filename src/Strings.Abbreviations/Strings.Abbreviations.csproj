@@ -10,4 +10,8 @@ Minimum Viable Product (or example) of creating your own library that is automat
     <RepositoryUrl>https://github.com/kkokosa/Strings.Abbreviations</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Strings.Abbreviations.Scientific\Strings.Abbreviations.Scientific.fsproj" />
+  </ItemGroup>
+
 </Project>
