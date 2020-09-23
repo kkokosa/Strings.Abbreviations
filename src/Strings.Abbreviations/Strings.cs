@@ -28,6 +28,6 @@ namespace String.Abbreviations
         public static string YOLO(bool titleCase = false) => !titleCase ? Yolo : Yolo_TitleCase;
 
         public static decimal GetCompressionRatio(string abbr, string phrase) 
-            => Scientific.calculateCompressionRatio(abbr, phrase);
+            => Scientific.CalculateCompressionRatio(abbr, phrase);
     }
 }
