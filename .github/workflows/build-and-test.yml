@@ -23,9 +23,3 @@ jobs:
       run: dotnet build ./src/ --configuration Release --no-restore
     - name: Test
       run: dotnet test ./src/ --no-restore --verbosity normal
-    - name: Publish NuGet on version change
-      id: publish_nuget
-      uses: rohith/publish-nuget@v2
-      with:
-        PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
