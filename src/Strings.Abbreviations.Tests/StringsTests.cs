@@ -22,14 +22,14 @@ namespace String.Abbreviations.Tests
         public void ImhoNormalTest()
         {
             var str = Strings.IMHO();
-            Assert.Equal("In my humble oppinion", str);
+            Assert.Equal("In my humble opinion", str);
         }
 
         [Fact]
         public void ImhoTitleCaseTest()
         {
             var str = Strings.IMHO(titleCase: true);
-            Assert.Equal("In My Humble Oppinion", str);
+            Assert.Equal("In My Humble Opinion", str);
         }
 
         [Fact]
