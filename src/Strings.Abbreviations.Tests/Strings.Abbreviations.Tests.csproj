@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\String.Abbreviations\String.Abbreviations.csproj" />
+    <ProjectReference Include="..\Strings.Abbreviations\Strings.Abbreviations.csproj" />
   </ItemGroup>
 
 </Project>
