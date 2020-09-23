@@ -26,5 +26,8 @@ namespace String.Abbreviations
         public static string ROTFL(bool titleCase = false) => !titleCase ? Rotfl : Rotfl_TitleCase;
         public static string AMA(bool titleCase = false) => !titleCase ? Ama : Ama_TitleCase;
         public static string YOLO(bool titleCase = false) => !titleCase ? Yolo : Yolo_TitleCase;
+
+        public static decimal GetCompressionRatio(string abbr, string phrase) 
+            => Scientific.calculateCompressionRatio(abbr, phrase);
     }
 }

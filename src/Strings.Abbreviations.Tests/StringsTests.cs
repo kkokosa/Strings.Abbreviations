@@ -87,5 +87,12 @@ namespace String.Abbreviations.Tests
             var str = Strings.YOLO(titleCase: true);
             Assert.Equal("You Only Live Once", str);
         }
+
+        [Fact]
+        public void ScientificTest()
+        {
+            var ratio = Strings.GetCompressionRatio(nameof(Strings.BRB), Strings.BRB());
+            Assert.Equal(0.2307692307692307692307692308M, ratio);
+        }
     }
 }
