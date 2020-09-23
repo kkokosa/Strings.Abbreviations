@@ -7,7 +7,6 @@
 # Strings.Abbreviations
 
 A set of predefined static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as:
-* a **joke**
 * playground for fresh open source contributors
 * **Minimum Viable Product** (or example) of creating your own library that is automatically tested/versioned and published as a NuGet package
 
@@ -46,6 +45,14 @@ Be Right Back
 * LMAO - "Laughing my ass off"
 * ROTFL - "Rolling on the floor laughing"
 * AMA - "Ask me anything"
+
+## CI/CD process
+
+`Strings.Abbreviations` is build, tested and published as a NuGet package with the use of [Github Actions](https://github.com/features/actions). They implement a minimum set of desirable features from the library author point of view.
+
+Currently there are two "pipelines" defined:
+* [building and testing](.github/workflows/build-and-test.yml) - every push and PR to `master` will trigger building and unit testing the whole repository. Thanks to that the result of the tests are available as an additional PR check. And we have a "badge" available on the top of this file.
+* [building and publishing a NuGet package](.github/workflows/publish-nuget.yml) - every push to `master` **that bumps up `Version` in the `csproj` file** will trigger building and publishing a new NuGet package. Additionaly, a new git tag will be added with the same version. It uses [Publish NuGet custom Github Action](https://github.com/marketplace/actions/publish-nuget)
 
 ## How to contribute?
 
