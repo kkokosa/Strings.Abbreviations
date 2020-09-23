@@ -1,8 +1,8 @@
-![Build and test](https://github.com/kkokosa/String.Abbreviations/workflows/Build%20and%20test/badge.svg)
+![Build and test](https://github.com/kkokosa/Strings.Abbreviations/workflows/Build%20and%20test/badge.svg)
 
-# String.Abbreviations
+# Strings.Abbreviations
 
-A set of predefined `string` static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as:
+A set of predefined static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as:
 * **Minimum Viable Product** (or example) of creating your own library that is automatically tested/versioned and published as a NuGet package
 * playground for fresh open source contributors
 
