@@ -1,0 +1,22 @@
+name: Publish NuGet package
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      # uses https://github.com/marketplace/actions/publish-nuget that build, pack & publish 
+      # nuget packages automatically when a project version is updated
+      - name: Publish NuGet on version change
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          # Flag to toggle git tagging, enabled by default
+          TAG_COMMIT: true
