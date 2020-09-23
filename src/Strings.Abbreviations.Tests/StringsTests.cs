@@ -61,7 +61,7 @@ namespace String.Abbreviations.Tests
         }
 
         [Fact]
-        public void AmalNormalTest()
+        public void AmaNormalTest()
         {
             var str = Strings.AMA();
             Assert.Equal("Ask me anything", str);
@@ -72,6 +72,20 @@ namespace String.Abbreviations.Tests
         {
             var str = Strings.AMA(titleCase: true);
             Assert.Equal("Ask Me Anything", str);
+        }
+
+        [Fact]
+        public void YoloNormalTest()
+        {
+            var str = Strings.YOLO();
+            Assert.Equal("You only live once", str);
+        }
+
+        [Fact]
+        public void YoloTitleCaseTest()
+        {
+            var str = Strings.YOLO(titleCase: true);
+            Assert.Equal("You Only Live Once", str);
         }
     }
 }
