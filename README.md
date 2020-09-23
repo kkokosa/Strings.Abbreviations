@@ -7,8 +7,11 @@
 # Strings.Abbreviations
 
 A set of predefined static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as:
-* **Minimum Viable Product** (or example) of creating your own library that is automatically tested/versioned and published as a NuGet package
+* a **joke**
 * playground for fresh open source contributors
+* **Minimum Viable Product** (or example) of creating your own library that is automatically tested/versioned and published as a NuGet package
+
+We will see where it will brings us with the contributions!
 
 ## Usage
 
