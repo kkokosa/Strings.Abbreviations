@@ -38,6 +38,13 @@ will print:
 Be Right Back
 ```
 
+If you want to know how much you gain using the abbreviation, we've got you covered.
+You can calculate the ratio between the abbreviation and the actual phrase like so:
+
+```cs
+Strings.GetCompressionRatio("BRB", Strings.BRB());
+```
+
 ## Currently supported abbreviations
 
 * BRB - "Be right back"
