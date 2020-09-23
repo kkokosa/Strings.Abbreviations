@@ -11,6 +11,7 @@ namespace String.Abbreviations
         private const string Brb_TitleCase = "Be Right Back";
         private const string Imho = "In my humble opinion";
         private const string Imho_TitleCase = "In My Humble Opinion";
+        private const string Eos = "En osaa sanoa"; // "Eng. 'Cannot say / I have no opinion.'";
         private const string Lmao = "Laughing my ass off";
         private const string Lmao_TitleCase = "Laughing My Ass Off";
         private const string Rotfl = "Rolling on the floor laughing";
@@ -22,6 +23,7 @@ namespace String.Abbreviations
 
         public static string BRB(bool titleCase = false) => !titleCase ? Brb : Brb_TitleCase;
         public static string IMHO(bool titleCase = false) => !titleCase ? Imho : Imho_TitleCase;
+        public static string EOS() => Eos; // No title case in Finnish
         public static string LMAO(bool titleCase = false) => !titleCase ? Lmao : Lmao_TitleCase;
         public static string ROTFL(bool titleCase = false) => !titleCase ? Rotfl : Rotfl_TitleCase;
         public static string AMA(bool titleCase = false) => !titleCase ? Ama : Ama_TitleCase;

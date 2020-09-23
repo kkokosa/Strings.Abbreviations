@@ -26,6 +26,13 @@ namespace String.Abbreviations.Tests
         }
 
         [Fact]
+        public void EosTest()
+        {
+            var str = Strings.EOS();
+            Assert.Equal("En osaa sanoa", str);
+        }
+
+        [Fact]
         public void ImhoTitleCaseTest()
         {
             var str = Strings.IMHO(titleCase: true);
