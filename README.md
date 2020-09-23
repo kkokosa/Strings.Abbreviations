@@ -1,7 +1,7 @@
 ![Build and test](https://github.com/kkokosa/Strings.Abbreviations/workflows/Build%20and%20test/badge.svg)
 [![NuGet](https://img.shields.io/nuget/v/Strings.Abbreviations)](https://www.nuget.org/packages/Strings.Abbreviations/)
 [![Downloads](https://img.shields.io/nuget/dt/Strings.Abbreviations)](https://www.nuget.org/packages/Strings.Abbreviations/)
-[![Stars](https://img.shields.io/github/stars/dotnet/Strings.Abbreviations)](https://github.com/kkokosa/Strings.Abbreviations/stargazers)
+[![Stars](https://img.shields.io/github/stars/kkokosa/Strings.Abbreviations)](https://github.com/kkokosa/Strings.Abbreviations/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 # Strings.Abbreviations
