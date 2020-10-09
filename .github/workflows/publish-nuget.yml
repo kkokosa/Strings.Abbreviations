@@ -9,18 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     env:
         PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
-        # Official NuGet Feed settings
-        NUGET_FEED: https://api.nuget.org/v3/index.json
-        NUGET_KEY: ${{ secrets.NUGET_KEY }}
+        TAG_FORMAT_PREFIX: v
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        
       - name: Get project version
-        id: projectVersion
+        id: project_version
         run: |
           $versionJsonOutput=dotnet version -f ${{ env.PROJECT_FILE_PATH }} --output-format=json
           $value=$versionJsonOutput | jq -r '.currentVersion'
-          echo ::set-output name=PROJECT_VERSION::'$value'
+          echo ::set-output name=PROJECT_VERSION::$value
 
       - name: Publish NuGet on version change
         id: publish_nuget
@@ -29,3 +30,9 @@ jobs:
           PROJECT_FILE_PATH: ${{ env.PROJECT_FILE_PATH }}
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           TAG_COMMIT: false
+
+      - name: Push tag
+        run: |
+          $tag=${{ env.TAG_FORMAT_PREFIX }}${{ steps.project_version.outputs.PROJECT_VERSION}}
+          git tag $tag
+          git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" $tag
