@@ -8,20 +8,29 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-        PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
+        DOTNET_VERSION: 3.1.401
+        PROJECT_FILE_PATH: src/Strings.Abbreviations/Strings.Abbreviations.csproj
         TAG_FORMAT_PREFIX: v
 
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      
+      - name: Install tools
+        run: dotnet tool restore
         
       - name: Get project version
         id: project_version
         run: |
-          $versionJsonOutput=dotnet version -f ${{ env.PROJECT_FILE_PATH }} --output-format=json
-          $value=$versionJsonOutput | jq -r '.currentVersion'
-          echo ::set-output name=PROJECT_VERSION::$value
+          versionJsonOutput=`dotnet version -f "${{ env.PROJECT_FILE_PATH }}" --output-format=json`
+          versionValue=`echo $versionJsonOutput | jq -r '.currentVersion'`
+          echo ::set-output name=PROJECT_VERSION::$versionValue
 
       - name: Publish NuGet on version change
         id: publish_nuget
@@ -33,6 +42,6 @@ jobs:
 
       - name: Push tag
         run: |
-          $tag=${{ env.TAG_FORMAT_PREFIX }}${{ steps.project_version.outputs.PROJECT_VERSION}}
+          tag=${{ env.TAG_FORMAT_PREFIX }}${{ steps.project_version.outputs.PROJECT_VERSION}}
           git tag $tag
           git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" $tag
