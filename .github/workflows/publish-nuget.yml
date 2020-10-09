@@ -7,16 +7,17 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+        PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
+        # Official NuGet Feed settings
+        NUGET_FEED: https://api.nuget.org/v3/index.json
+        NUGET_KEY: ${{ secrets.NUGET_KEY }}
+
     steps:
       - uses: actions/checkout@v2
-        
-      # uses https://github.com/marketplace/actions/publish-nuget that build, pack & publish 
-      # nuget packages automatically when a project version is updated
-      - name: Publish NuGet on version change
-        id: publish_nuget
-        uses: rohith/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: ./src/Strings.Abbreviations/Strings.Abbreviations.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          # Flag to toggle git tagging, enabled by default
-          TAG_COMMIT: true
+      - name: Get project version
+        id: projectVersion
+        run: |
+          $versionJsonOutput=dotnet version -f ${{ env.PROJECT_FILE_PATH }} --output-format=json
+          $value=$versionJsonOutput | jq -r '.currentVersion'
+          echo ::set-output name=PROJECT_VERSION::'$value'
