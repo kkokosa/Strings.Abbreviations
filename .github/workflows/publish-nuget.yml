@@ -21,3 +21,11 @@ jobs:
           $versionJsonOutput=dotnet version -f ${{ env.PROJECT_FILE_PATH }} --output-format=json
           $value=$versionJsonOutput | jq -r '.currentVersion'
           echo ::set-output name=PROJECT_VERSION::'$value'
+
+      - name: Publish NuGet on version change
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: ${{ env.PROJECT_FILE_PATH }}
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          TAG_COMMIT: false
