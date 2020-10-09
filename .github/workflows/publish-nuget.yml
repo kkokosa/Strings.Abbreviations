@@ -12,6 +12,12 @@ jobs:
         PROJECT_FILE_PATH: src/Strings.Abbreviations/Strings.Abbreviations.csproj
         TAG_FORMAT_PREFIX: v
 
+         # Stop wasting time caching packages
+        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+
+        # Disable sending usage data
+        DOTNET_CLI_TELEMETRY_OPTOUT: true
+
     steps:
       - uses: actions/checkout@v2
         with:
