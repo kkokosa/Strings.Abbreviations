@@ -59,7 +59,8 @@ Strings.GetCompressionRatio("BRB", Strings.BRB());
 
 Currently there are two "pipelines" defined:
 * [building and testing](.github/workflows/build-and-test.yml) - every push and PR to `master` will trigger building and unit testing the whole repository. Thanks to that the result of the tests are available as an additional PR check. And we have a "badge" available on the top of this file.
-* [building and publishing a NuGet package](.github/workflows/publish-nuget.yml) - every push to `master` **that bumps up `Version` in the `csproj` file** will trigger building and publishing a new NuGet package. Additionaly, a new git tag will be added with the same version. It uses [Publish NuGet custom Github Action](https://github.com/marketplace/actions/publish-nuget)
+* [building and publishing a NuGet package](.github/workflows/publish-nuget.yml) - every push to `master` **that bumps up `Version` in the `csproj` file** will trigger building and publishing a new NuGet package. Additionally, a new git tag will be added with the same version. It uses [Publish NuGet custom Github Action](https://github.com/marketplace/actions/publish-nuget)
+* [creating a release](.github/workflows/create-release.yml) - after a new tag (with version) has been pushed in the `publish-nuget.yml` workflow, this one will create a new release with this version
 
 ## How to contribute?
 
