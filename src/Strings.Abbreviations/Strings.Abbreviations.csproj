@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.1.3</Version>
+    <Version>0.1.4</Version>
     <Authors>Konrad Kokosa</Authors>
     <Description>A set of predefined static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as: 
 Minimum Viable Product (or example) of creating your own library that is automatically tested/versioned and published as a NuGet package and playground for fresh open source contributors.</Description>
