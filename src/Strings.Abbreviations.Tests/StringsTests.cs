@@ -96,6 +96,20 @@ namespace String.Abbreviations.Tests
         }
 
         [Fact]
+        public void LgtmNormalTest()
+        {
+            var str = Strings.LGTM();
+            Assert.Equal("Looks good to me", str);
+        }
+
+        [Fact]
+        public void LgtmTitleCaseTest()
+        {
+            var str = Strings.LGTM(titleCase: true);
+            Assert.Equal("Looks Good To Me", str);
+        }
+
+        [Fact]
         public void ScientificTest()
         {
             var ratio = Strings.GetCompressionRatio(nameof(Strings.BRB), Strings.BRB());
