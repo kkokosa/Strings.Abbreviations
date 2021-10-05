@@ -54,6 +54,8 @@ Strings.GetCompressionRatio("BRB", Strings.BRB());
 * LMAO - "Laughing my ass off"
 * ROTFL - "Rolling on the floor laughing"
 * AMA - "Ask me anything"
+* YOLO - "You only live once"
+* LGTM - "Looks good to me"
 
 ## CI/CD process
 
