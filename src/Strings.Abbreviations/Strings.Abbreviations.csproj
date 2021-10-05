@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net5;netstandard2.0</TargetFrameworks>
     <Version>0.1.5</Version>
     <Authors>Konrad Kokosa</Authors>
     <Description>A set of predefined static methods for popular abbreviations. While this is (barely) useful by itself, it mostly serves as: 
