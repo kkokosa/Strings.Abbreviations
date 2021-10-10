@@ -110,6 +110,20 @@ namespace String.Abbreviations.Tests
         }
 
         [Fact]
+        public void TfwNormalTest()
+        {
+            var str = Strings.TFW();
+            Assert.Equal("That feel when", str);
+        }
+
+        [Fact]
+        public void TfmTitleCaseTest()
+        {
+            var str = Strings.TFW(titleCase: true);
+            Assert.Equal("That Feel When", str);
+        }
+
+        [Fact]
         public void ScientificTest()
         {
             var ratio = Strings.GetCompressionRatio(nameof(Strings.BRB), Strings.BRB());

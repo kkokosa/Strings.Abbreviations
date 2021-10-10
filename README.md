@@ -56,6 +56,7 @@ Strings.GetCompressionRatio("BRB", Strings.BRB());
 * AMA - "Ask me anything"
 * YOLO - "You only live once"
 * LGTM - "Looks good to me"
+* TFW - "That feel when"
 
 ## CI/CD process
 
