@@ -22,6 +22,8 @@ namespace String.Abbreviations
         private const string Yolo_TitleCase = "You Only Live Once";
         private const string Lgtm = "Looks good to me";
         private const string Lgtm_TitileCase = "Looks Good To Me";
+        private const string Tfw = "That feel when";
+        private const string Tfw_TitleCase = "That Feel When";
 
         public static string BRB(bool titleCase = false) => !titleCase ? Brb : Brb_TitleCase;
         public static string IMHO(bool titleCase = false) => !titleCase ? Imho : Imho_TitleCase;
@@ -31,6 +33,7 @@ namespace String.Abbreviations
         public static string AMA(bool titleCase = false) => !titleCase ? Ama : Ama_TitleCase;
         public static string YOLO(bool titleCase = false) => !titleCase ? Yolo : Yolo_TitleCase;
         public static string LGTM(bool titleCase = false) => !titleCase ? Lgtm : Lgtm_TitileCase;
+        public static string TFW(bool titleCase = false) => !titleCase ? Tfw : Tfw_TitleCase;
 
         public static decimal GetCompressionRatio(string abbr, string phrase) 
             => Scientific.CalculateCompressionRatio(abbr, phrase);
