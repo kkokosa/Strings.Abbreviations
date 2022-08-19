@@ -28,7 +28,7 @@ namespace String.Abbreviations.Tests
         [Fact]
         public void EosTest()
         {
-            var str = Strings.EOS();
+            var str = Strings.FI.EOS();
             Assert.Equal("En osaa sanoa", str);
         }
 

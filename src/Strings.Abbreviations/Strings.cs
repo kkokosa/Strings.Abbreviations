@@ -27,7 +27,6 @@ namespace String.Abbreviations
 
         public static string BRB(bool titleCase = false) => !titleCase ? Brb : Brb_TitleCase;
         public static string IMHO(bool titleCase = false) => !titleCase ? Imho : Imho_TitleCase;
-        public static string EOS() => Eos; // No title case in Finnish
         public static string LMAO(bool titleCase = false) => !titleCase ? Lmao : Lmao_TitleCase;
         public static string ROTFL(bool titleCase = false) => !titleCase ? Rotfl : Rotfl_TitleCase;
         public static string AMA(bool titleCase = false) => !titleCase ? Ama : Ama_TitleCase;
@@ -37,5 +36,10 @@ namespace String.Abbreviations
 
         public static decimal GetCompressionRatio(string abbr, string phrase) 
             => Scientific.CalculateCompressionRatio(abbr, phrase);
+        
+        public static class FI
+        {
+            public static string EOS() => Eos; // No title case in Finnish
+        }
     }
 }
