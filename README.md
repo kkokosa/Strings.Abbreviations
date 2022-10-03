@@ -57,6 +57,7 @@ Strings.GetCompressionRatio("BRB", Strings.BRB());
 * YOLO - "You only live once"
 * LGTM - "Looks good to me"
 * TFW - "That feel when"
+* ICYMI - "In case you missed it"
 
 ## CI/CD process
 

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace String.Abbreviations
+﻿namespace String.Abbreviations
 {
     public static class Strings
     {
@@ -24,6 +22,8 @@ namespace String.Abbreviations
         private const string Lgtm_TitileCase = "Looks Good To Me";
         private const string Tfw = "That feel when";
         private const string Tfw_TitleCase = "That Feel When";
+        private const string Icymi = "In case you missed it";
+        private const string Icymi_TitleCase = "In Case You Missed It";
 
         public static string BRB(bool titleCase = false) => !titleCase ? Brb : Brb_TitleCase;
         public static string IMHO(bool titleCase = false) => !titleCase ? Imho : Imho_TitleCase;
@@ -34,8 +34,9 @@ namespace String.Abbreviations
         public static string YOLO(bool titleCase = false) => !titleCase ? Yolo : Yolo_TitleCase;
         public static string LGTM(bool titleCase = false) => !titleCase ? Lgtm : Lgtm_TitileCase;
         public static string TFW(bool titleCase = false) => !titleCase ? Tfw : Tfw_TitleCase;
+        public static string ICYMI(bool titleCase = false) => !titleCase ? Icymi : Icymi_TitleCase;
 
-        public static decimal GetCompressionRatio(string abbr, string phrase) 
+        public static decimal GetCompressionRatio(string abbr, string phrase)
             => Scientific.CalculateCompressionRatio(abbr, phrase);
     }
 }

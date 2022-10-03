@@ -124,6 +124,20 @@ namespace String.Abbreviations.Tests
         }
 
         [Fact]
+        public void IcymiNormalTest()
+        {
+            var str = Strings.ICYMI();
+            Assert.Equal("In case you missed it", str);
+        }
+
+        [Fact]
+        public void IcymiTitleCaseTest()
+        {
+            var str = Strings.ICYMI(titleCase: true);
+            Assert.Equal("In Case You Missed It", str);
+        }
+
+        [Fact]
         public void ScientificTest()
         {
             var ratio = Strings.GetCompressionRatio(nameof(Strings.BRB), Strings.BRB());
